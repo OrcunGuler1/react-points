@@ -13,7 +13,7 @@ function App() {
     setPoints(prev => [...prev, { x: clientX, y: clientY }])
   }
 
-  const handleUndo = (e: React.MouseEvent) => {
+  const handleUndo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation()
     setPoints(prev => {
       const lastPoint = prev[prev.length - 1]
@@ -21,7 +21,7 @@ function App() {
       return prev.slice(0, -1)
     })
   }
-  const handleRedo = (e: React.MouseEvent) => {
+  const handleRedo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation()
     setRemovedPoints(prev => {
       const lastPoint = prev[prev.length - 1]
