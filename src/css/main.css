@@ -1,0 +1,52 @@
+#root {
+  background-color: #111111;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  height: inherit;
+  position: relative;
+}
+
+.point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.undo,
+.redo {
+  cursor: pointer;
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75em 1.25em;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.undo {
+  right: 5%;
+  top: 5%;
+}
+
+.redo {
+  right: 5%;
+  top: 15%;
+}
+.undo:hover,
+.redo:hover {
+  background-color: #eeeeee;
+}
+
+.undo:disabled,
+.redo:disabled {
+  cursor: default;
+}
